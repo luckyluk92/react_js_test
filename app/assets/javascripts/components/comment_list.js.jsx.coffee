@@ -1,14 +1,10 @@
-@CommentList = React.createClass(
+@CommentList = React.createClass
+  renderCommentNodes: ->
+    @props.data.map (comment)->
+      React.createElement Comment,
+        author: comment.user,
+          comment.content
   render: ->
-    commentsNodes = @props.data.map (comment)->
-      return(
-        `<Comment author={comment.author}>
-          {comment.text}
-        </Comment>`
-      )
-    return(
-      `<div className="commentList">
-        {commentsNodes}
-      </div>`
-    )
-)
+    React.DOM.div
+      className: "commentList",
+        @renderCommentNodes()
