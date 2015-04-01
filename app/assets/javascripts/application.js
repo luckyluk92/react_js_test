@@ -16,6 +16,7 @@
 //= require react
 //= require react_ujs
 //= require showdown
+//= require react-router
 //= require components
 //= require_tree ./main
 //= require_tree .

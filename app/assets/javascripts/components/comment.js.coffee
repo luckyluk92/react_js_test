@@ -6,6 +6,7 @@ converter = new Showdown.converter()
       className: "comment",
         React.createElement Author,
           name: @props.author
+          vip: @props.vip
         React.DOM.span
           dangerouslySetInnerHTML: 
             __html: rawHtml

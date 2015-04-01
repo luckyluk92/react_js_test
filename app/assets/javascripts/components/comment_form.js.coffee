@@ -4,6 +4,7 @@
     comment = {
       user: React.findDOMNode(@refs.user).value.trim()
       content: React.findDOMNode(@refs.content).value.trim()
+      vip: React.findDOMNode(@refs.vip).checked
     }
     return if !comment.user? || !comment.content?
 
@@ -11,6 +12,7 @@
     #I think jQuery would looks much better...
     React.findDOMNode(@refs.user).value = ''
     React.findDOMNode(@refs.content).value = ''
+    React.findDOMNode(@refs.vip).checked = false
 
   render: ->
     React.createElement Form,
@@ -18,18 +20,21 @@
       form: @props.form
       handleSubmit: @handleSubmit,
         React.DOM.input
-          key: 1
           type: "text"
           placeholder: "Name"
           ref: "user"
           name: "comment[user]"
         React.DOM.input
-          key: 2
           type: "text"
           placeholder: "Say..."
           ref: "content"
           name: "comment[content]"
         React.DOM.input
-          key: 3
+          type: "checkbox"
+          ref: "vip"
+          name: "comment[vip]",
+            "Are you a VIP?"
+        React.DOM.br(null)
+        React.DOM.input
           type: "submit"
           value: "Post"

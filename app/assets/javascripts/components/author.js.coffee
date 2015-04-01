@@ -1,6 +1,4 @@
 @Author = React.createClass
-  isVip: ->
-    @props.name == "Łukasz"
   renderVip: ()->
     React.DOM.h3
         className: "commentAuthor",
@@ -11,7 +9,7 @@
         className: "commentAuthor",
           @props.name
   render: ->
-    if @isVip()
+    if @props.vip
       @renderVip()
     else
       @renderNormal()
