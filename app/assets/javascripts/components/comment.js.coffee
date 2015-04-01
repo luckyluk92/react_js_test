@@ -4,9 +4,8 @@ converter = new Showdown.converter()
     rawHtml = converter.makeHtml(@props.children.toString())
     React.DOM.div
       className: "comment",
-        React.DOM.h3
-          className: "commentAuthor",
-            @props.author
+        React.createElement Author,
+          name: @props.author
         React.DOM.span
           dangerouslySetInnerHTML: 
             __html: rawHtml
