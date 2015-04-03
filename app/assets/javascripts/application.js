@@ -7,7 +7,7 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
 //
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// Read Sprockets README ( https://github.com/sstephenson/sprockets#sprockets-directives ) for details
 // about supported directives.
 //
 //= require jquery
@@ -16,7 +16,8 @@
 //= require react
 //= require react_ujs
 //= require showdown
-//= require react-router
-//= require components
+//= require react-router/build/global/ReactRouter
+//= require classnames/index
+//= require_tree ./components
 //= require_tree ./main
 //= require_tree .

@@ -46,9 +46,10 @@ group :development, :test do
 end
 
 
-gem 'react-rails', github: 'reactjs/react-rails'
-gem 'better_errors'
-gem 'haml-rails'
+gem 'react-rails', github: 'reactjs/react-rails'    
+gem 'sprockets-coffee-react'
+gem 'better_errors'                                 
+gem 'haml-rails'                                    
 gem 'showdown-rails'
 gem 'responders'
 gem 'bower-rails'

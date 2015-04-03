@@ -30,11 +30,12 @@
           ref: "content"
           name: "comment[content]"
         React.DOM.input
+          className: "grd-row-col-1-6"
           type: "checkbox"
           ref: "vip"
           name: "comment[vip]",
-            "Are you a VIP?"
-        React.DOM.br(null)
+        React.DOM.span null,
+          "Are you a VIP?"
         React.DOM.input
           type: "submit"
           value: "Post"

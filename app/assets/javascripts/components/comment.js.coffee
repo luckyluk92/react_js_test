@@ -1,12 +1,16 @@
+# @cjsx React.DOM
+#
 converter = new Showdown.converter()
 @Comment = React.createClass
-  render: ->
+  renderSingle: (classes)->
     rawHtml = converter.makeHtml(@props.children.toString())
-    React.DOM.div
-      className: "comment",
-        React.createElement Author,
-          name: @props.author
-          vip: @props.vip
-        React.DOM.span
-          dangerouslySetInnerHTML: 
-            __html: rawHtml
+    <div className={classes}>
+      <Author name={@props.author} vip={@props.vip} />
+      <span dangerouslySetInnerHTML={{__html: rawHtml}} />
+    </div>
+
+  render: ->
+    classes = classNames
+      "comment": true
+      "col-md-3": @props.display == 'block'
+    @renderSingle(classes)
